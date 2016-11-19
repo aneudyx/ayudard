@@ -11,8 +11,8 @@
         }
 
 	###### Including php file ################
-	include_once('plugins/advanced-custom-fields/acf.php');
-    include 'plugins/informaciones/informaciones_generales.php';
+	//include_once('plugins/advanced-custom-fields/acf.php');
+    //include 'plugins/informaciones/informaciones_generales.php';
     #####  End Including php file ############
 	
 	/* Agregando subtitulo a la pagina contactos */
