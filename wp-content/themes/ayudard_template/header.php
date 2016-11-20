@@ -22,7 +22,7 @@
 	<meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/screenshot.png" />
 	<meta name="twitter:url" content="<?php echo site_url(); ?>" />
 
-    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicon.png" />
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 
     <meta name="description" content="">
 
@@ -93,16 +93,10 @@
                      
                 </li>
                 <li>
-                    <a href="<?php echo site_url(); ?>/centros">Centros de acopio</a>                    
-                </li>
-                <li>
-                    <a href="<?php echo site_url(); ?>/damnificados">Damnificados</a>
+                    <a href="<?php echo site_url(); ?>/centros">Daminificados</a>                    
                 </li>
                 <li>
                     <a href="<?php echo site_url(); ?>/fundaciones" >Fundaciones</a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url(); ?>/informate">Inf&oacute;rmate</a>                    
                 </li>
              </ul>
         </div><!-- navbar-collapse -->

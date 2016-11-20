@@ -1,0 +1,33 @@
+.ui-widget-content{
+	background: none;
+	padding: 5px;
+}
+
+.edit_icon{
+	float: right;
+}
+
+.ui-accordion-content{
+	height: 205px !important;
+}
+
+h3.ui-accordion-header{
+	border: 1px solid;
+}
+
+#ui-datepicker-div{
+	background-color: #f6f6f6 ;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	border: none;
+}
+
+
+.ui-datepicker-next{
+	float: right;
+}
+
+.ui-widget-header .ui-icon{
+	background: none;
+}

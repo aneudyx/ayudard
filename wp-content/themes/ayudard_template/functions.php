@@ -10,9 +10,37 @@
             set_post_thumbnail_size( 140, 140,false);
         }
 
+	add_filter('nav_menu_css_class' , 'agrega_clases' , 10 , 2);
+	function agrega_clases($classes, $item){
+		 if(is_home() && $item->title == "inicio"){
+			$classes[] = "active nav-item";
+		 }elseif(in_array('current-menu-item', $classes)){
+			 $classes[] = "active nav-item";
+		 }
+		 else{
+			$classes[] = "nav-item";
+		 }
+		 return $classes;
+	}
+	
+	function set_per_page( $query ) {
+		global $wp_the_query;
+		if($query->is_post_type_archive()&&($query === $wp_the_query)){
+		$query->set( 'posts_per_page', 2);
+		}
+	  return $query;
+	}
+	
+	function new_excerpt_more( $more ) {
+		return '...';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
+	
 	###### Including php file ################
-	//include_once('plugins/advanced-custom-fields/acf.php');
+	include_once('plugins/advanced-custom-fields/acf.php');
     //include 'plugins/informaciones/informaciones_generales.php';
+    include 'plugins/centros/centro.php';
+    include 'plugins/fundaciones/fundaciones.php';
     #####  End Including php file ############
 	
 	/* Agregando subtitulo a la pagina contactos */

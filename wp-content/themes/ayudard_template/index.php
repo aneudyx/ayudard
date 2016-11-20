@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 padding-40">
-                <p class="slogan text-center no-margin">&#161;T&uacute; puedes ayudar a salvar a tus hermanos dominicanos! </p>
+                <p class="slogan text-center no-margin">&#161;T&uacute; puedes ayudar a quienes hoy te necesitan! </p>
             </div>
         </div>
     </div>
