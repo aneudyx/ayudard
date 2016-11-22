@@ -2,16 +2,16 @@
 	add_action('init', 'fundaciones_init');
         function fundaciones_init() {
             $labels = array(
-                            'name' => _x('Fundaciones', 'post type general name'),
-                            'singular_name' => _x('Fundacion', 'post type singular name'),
-                            'add_new' => _x('Agregar Fundacion', ''),
-                            'add_new_item' => __('Agregar Nueva Fundacion'),
-                            'edit_item' => __('Editar Fundacion'),
-                            'new_item' => __('Nuevo Fundacion'),
-                            'view_item' => __('Ver Fundacion'),
+                            'name' => _x('Centros De Acopio', 'post type general name'),
+                            'singular_name' => _x('Centro De Acopio', 'post type singular name'),
+                            'add_new' => _x('Agregar Centro De Acopio', ''),
+                            'add_new_item' => __('Agregar Nuevo Centros De Acopio'),
+                            'edit_item' => __('Editar Centro De Acopio'),
+                            'new_item' => __('Nuevo Centro De Acopio'),
+                            'view_item' => __('Ver Centro De Acopio'),
                             'search_items' => __('Buscar '),
-                            'not_found' => __('Fundacion no econtrada'),
-                            'not_found_in_trash' => __('No se encontraron fundaciones'),
+                            'not_found' => __('Centros De Acopio no econtrado'),
+                            'not_found_in_trash' => __('No se encontraron centros de acopio'),
                         );
             $args = array(
                         'labels' => $labels,
@@ -23,23 +23,23 @@
 						'has_archive' => true,
                         'hierarchical' => false,
                         'menu_position' => null,
-                        'supports' => array('title','editor','thumbnail','author')
+						'taxonomies'  => array( 'municipios', 'category' ),
+                        'supports' => array('title','editor','thumbnail')
                     );
             register_post_type('fundaciones',$args);
         }
 	
-	/*if(function_exists("register_field_group"))
+	if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_equipo',
-		'title' => 'Equipo',
+		'id' => 'acf_informacion-fundacion',
+		'title' => 'Informacion Fundacion',
 		'fields' => array (
 			array (
-				'key' => 'field_55dfbd5ea0341',
-				'label' => 'Rol',
-				'name' => 'rol',
+				'key' => 'field_58307e4e567de',
+				'label' => 'Direccion',
+				'name' => 'direccion',
 				'type' => 'text',
-				'required' => 1,
 				'default_value' => '',
 				'placeholder' => '',
 				'prepend' => '',
@@ -47,13 +47,35 @@
 				'formatting' => 'html',
 				'maxlength' => '',
 			),
+			array (
+				'key' => 'field_58307e571cde4',
+				'label' => 'Telefonos',
+				'name' => 'telefonos',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_58307e641cde5',
+				'label' => 'Email',
+				'name' => 'email',
+				'type' => 'email',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
 		),
 		'location' => array (
 			array (
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'equipo',
+					'value' => 'fundaciones',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -61,13 +83,14 @@
 		),
 		'options' => array (
 			'position' => 'normal',
-			'layout' => 'no_box',
+			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
 		),
 		'menu_order' => 0,
 	));
-}*/
+}
+
 
 
 ?>

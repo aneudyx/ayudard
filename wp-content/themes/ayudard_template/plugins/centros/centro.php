@@ -2,8 +2,8 @@
 	add_action('init', 'centros_init');
 	function centros_init() {
 		$labels = array(
-						'name' => _x('Centros', 'centros de damnificados'),
-						'singular_name' => _x('centro', 'Centro de Damnificados'),
+						'name' => _x('Centros De Damnificados', 'centros de damnificados'),
+						'singular_name' => _x('Centro De Damnificado', 'Centro de Damnificados'),
 						'add_new' => _x('Agregar Nuevo', ''),
 						'add_new_item' => __('Agregar Nuevo Centro De Damnificado'),
 						'edit_item' => __('Editar Centro De Damnificado'),
@@ -23,7 +23,7 @@
 					'has_archive' => true,
 					'hierarchical' => false,
 					'menu_position' => null,
-					'supports' => array('title','editor','thumbnail')
+					'supports' => array('title','editor','thumbnail','municipios')
 				);
 		register_post_type('centros',$args);
 	}
@@ -128,10 +128,8 @@
    //Se trabaja todo lo concerniente a Damnificados
 	
 	function add_custom_meta_box_damnificados() {
-		wp_enqueue_script('jquery', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/jquery-1.11.1.min.js');
-		wp_enqueue_script('jquery-ui', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/jquery-ui.min.js'); 
-		wp_enqueue_script('custom-js', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/custom.js');
-		wp_register_style( 'custom-css', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/jquery-ui.min.css');		
+		wp_enqueue_script('jquery', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/jquery-1.11.1.min.js'); 
+		wp_enqueue_script('custom-js', get_template_directory_uri().'/plugins/centros/jquery-ui-1.11.2.custom/custom.js');		
 		wp_register_style( 'custom-style', get_template_directory_uri().'/plugins/centros/css/custom.css');
 		wp_enqueue_style( 'custom-style' ); 
 		$post_type = array('centros');
@@ -281,4 +279,59 @@
 	}
    add_action( 'wp_ajax_nopriv_borra_un_damnificado', 'borra_un_damnificado' );
    add_action( 'wp_ajax_borra_un_damnificado', 'borra_un_damnificado' );
+   
+   //Informacion Del Centro De Damnificado
+   if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_informacion-centros',
+		'title' => 'Informacion Centros',
+		'fields' => array (
+			array (
+				'key' => 'field_58307c882c9b1',
+				'label' => 'Direccion',
+				'name' => 'direccion',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_58307ce886f6c',
+				'label' => 'Telefono',
+				'name' => 'telefono',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'centros',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 ?>

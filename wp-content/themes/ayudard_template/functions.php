@@ -1,9 +1,20 @@
-<?php   
-
-	
+<?php   	
 	register_nav_menus( array(
 		'menu_principal'   => __( 'Menu Principal', 'ayudard' )
 	) );
+	
+	if ( function_exists('register_sidebar') ){
+        register_sidebar(
+			array(
+				'name'=>'Main Sidebar',
+				'id'=>'main_sidebar',
+				'before_widget' => '',
+				'after_widget' => '<hr>',
+				'before_title' => '<h4 class="header_widget">',
+				'after_title' => '</h4>',
+			)
+		);
+    }
 	
 	if ( function_exists( 'add_theme_support' ) ) {
             add_theme_support( 'post-thumbnails' );
@@ -41,9 +52,9 @@
     //include 'plugins/informaciones/informaciones_generales.php';
     include 'plugins/centros/centro.php';
     include 'plugins/fundaciones/fundaciones.php';
+    include 'plugins/functions_taxonomies.php';
     #####  End Including php file ############
 	
-	/* Agregando subtitulo a la pagina contactos */
 		
 
 ?>

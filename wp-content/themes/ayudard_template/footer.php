@@ -6,11 +6,10 @@
             <div class="col-md-6">
                 <h3 class="footer-widget-title">Sitemap</h3>
                 <ul class="list-unstyled three_cols">
-                    <li><a href="<?php echo site_url(); ?>/index.html">Inicio</a></li>
-                    <li><a href="<?php echo site_url(); ?>/blog.html">Centros de acopio</a></li>
-                    <li><a href="<?php echo site_url(); ?>/portfolio_sidebar.html">Fundaciones</a></li>
-                    <li><a href="<?php echo site_url(); ?>/portfolio_topvar.html">Damnificados</a></li>
-                    <li><a href="<?php echo site_url(); ?>/page_timeline_left.html">&#161;Inform&aacute;te!</a></li>                   
+                    <li><a href="<?php echo site_url(); ?>">Inicio</a></li>
+                    <li><a href="<?php echo site_url(); ?>/fundaciones">Centros de acopio</a></li>
+                    <li><a href="https://donorbox.org/somos-puerto-plata" target="_blank">Jompeame</a></li>                
+                    <li><a href="<?php echo site_url(); ?>/contactos">Contactos</a></li>                
                 </ul>               
             </div>
         </div> <!-- row -->

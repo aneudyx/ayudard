@@ -7,7 +7,7 @@ jQuery( document ).ready(function() {
 		if(donacion != "" && postID != ""){
 			jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'agrega_una_donacion',
 				  donacion: donacion,
@@ -37,7 +37,7 @@ jQuery( document ).ready(function() {
 		if(nombre != "" && postID != "" && edad != "" && localidad != "" && genero != ""){
 			jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'guarda_un_damnificado',
 				  nombre: nombre,
@@ -72,7 +72,7 @@ function edita(id){
 	if(donacion != "" && donacion_id != "" && postID != ""){
 			jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'actualiza_una_donacion',
 				  donacion: donacion,
@@ -102,7 +102,7 @@ function borra(id){
 	if(confirmacion == true && donacion_id != ""){
 		jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'borra_una_donacion',
 				  donacion_id: donacion_id
@@ -133,7 +133,7 @@ function edita_damnificado(id){
 	if(nombre != "" && damnificado_id != "" && postID != "" && edad != "" && localidad != "" && genero != ""){
 			jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'actualiza_un_damnificado',
 				  nombre: nombre,
@@ -166,7 +166,7 @@ function borra_damnificado(id){
 	if(confirmacion == true && damnificado_id != ""){
 		jQuery.ajax({
 				type: 'POST',
-				url: 'http://localhost/ayuda-rd/wp-admin/admin-ajax.php',
+				url: 'http://ayudard.com/wp-admin/admin-ajax.php',
 				data: {
 				  action: 'borra_un_damnificado',
 				  damnificado_id: damnificado_id

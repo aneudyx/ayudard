@@ -28,7 +28,7 @@
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>Artículo</th>
+                      <th>Artículos:</th>
                     </tr>
                   </thead>
                   <tbody>

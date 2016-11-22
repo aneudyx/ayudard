@@ -9,16 +9,16 @@
     <title><?php bloginfo('name'); ?></title>
 	
 	<!-- Meta -->
-	<meta property="og:title" content="Colegio San Juan Bautista - Educar en la verdad para la libertad" />
-	<meta property="og:site_name" content="Colegio San Juan Bautista"/>
-	<meta property="og:url" content="<?php echo site_url(); ?>" />
-	<meta property="og:description" content="<?php echo get_option('mensaje');?>" />
-	<meta property="og:image" content="<?php bloginfo('template_url'); ?>/screenshot.png" />
+	<meta property="og:title" content="Ayuda RD - Una mano solidaria a tu país" />
+	<meta property="og:site_name" content="Ayuda RD"/>
+	<meta property="og:url" content="http://ayudard.com/" />
+	<meta property="og:description" content="Nuestro fin es proveerte un listado de todos los centros de acopio, de manera que puedas ayudar a los afectados por las lluvias" />
+	<meta property="og:image" content="http://ayudard.com/wp-content/themes/ayudard_template/screenshot.png" />
 	
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@discoagenda" />
-	<meta name="twitter:title" content="Colegio San Juan Bautista - Educar en la verdad para la libertad" />
-	<meta name="twitter:description" content="<?php echo get_option('mensaje');?>" />
+	<meta name="twitter:site" content="@AyudaRD" />
+	<meta name="twitter:title" content="Ayuda RD - Una mano solidaria a tu país" />
+	<meta name="twitter:description" content="Nuestro fin es proveerte los lugares donde estan los damnificados y sus necesidades, para que puedas ayudar via los centros de acopio" />
 	<meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/screenshot.png" />
 	<meta name="twitter:url" content="<?php echo site_url(); ?>" />
 
@@ -59,7 +59,20 @@
         <script src="<?php bloginfo('template_url'); ?>/assets/js/html5shiv.min.js"></script>
         <script src="<?php bloginfo('template_url'); ?>/assets/js/respond.min.js"></script>
     <![endif]-->
+	
+	
+	
 	<?php wp_head(); ?>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-87686693-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
 
 <!-- Preloader -->
@@ -68,7 +81,7 @@
 </div>
 
 <body>
-
+	
 <div class="sb-site-container">
 <div class="boxed">
 
@@ -81,7 +94,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
             </button>
-            <a id="ar-brand" class="navbar-brand" href="index.html">Ayuda<span>RD</span></a>
+            <a id="ar-brand" class="navbar-brand" href="<?php echo site_url(); ?>">Ayuda<span>RD</span></a>
         </div> <!-- navbar-header -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,10 +106,13 @@
                      
                 </li>
                 <li>
-                    <a href="<?php echo site_url(); ?>/centros">Daminificados</a>                    
+                    <a href="<?php echo site_url(); ?>/fundaciones" >Centros De Acopio</a>
                 </li>
-                <li>
-                    <a href="<?php echo site_url(); ?>/fundaciones" >Fundaciones</a>
+				<li>
+                    <a href="https://donorbox.org/somos-puerto-plata" target="_blank">Jompeame</a>                    
+                </li>
+				<li>
+                    <a href="<?php echo site_url(); ?>/contactos">Contactos</a>                    
                 </li>
              </ul>
         </div><!-- navbar-collapse -->
